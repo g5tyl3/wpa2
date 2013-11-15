@@ -16,25 +16,12 @@ import org.springframework.stereotype.Component;
  * @author jan
  */
 @Component
-@Scope("request")
 public class HelloBean {
     
-    protected String userName;
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-    public String sayHello()
+    
+    public String sayHello(String userName)
     {
-        return "hello world!";
+        return "hello " + userName + " !";
     }
-    public void execute()
-    {
-        FacesMessage message = new FacesMessage("ok", "Name " + userName + " submitted");
-        FacesContext.getCurrentInstance().addMessage(null, message);
-    }
+    
 }
