@@ -9,7 +9,9 @@ package cz.cvut.stepaj29.springhello.services;
 import cz.cvut.stepaj29.springhello.bo.User;
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceUnit;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -19,20 +21,25 @@ import org.springframework.stereotype.Component;
 @Component
 public class HelloBean {
     
-    @PersistenceUnit
-    protected EntityManager entityManager;
+    @Autowired
+    EntityManagerFactory managerFactory;
+    
+    protected EntityManager getManager()
+    {
+        return managerFactory.createEntityManager();
+    }
     
     public String sayHello(String userName)
     {
         User user = new User();
         user.setName(userName);
-        entityManager.persist(user);
+        getManager().persist(user);
         return "hello " + userName + " !";
     }
     
     public List<String> getNames()
     {
-        return entityManager.createQuery("select e from User e").getResultList();
+        return getManager().createQuery("select e from User e").getResultList();
         
     }
     

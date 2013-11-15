@@ -8,8 +8,10 @@ package cz.cvut.stepaj29.springhello.bo;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
 
 /**
  *
@@ -19,6 +21,7 @@ import javax.persistence.Table;
 @Table(name="users")
 public class User implements Serializable{
     @Id
+    @GeneratedValue
     private Long id;
     protected String name;
 
