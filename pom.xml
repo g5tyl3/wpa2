@@ -44,18 +44,6 @@
             <version>${org.springframework.version}</version>
         </dependency>
  
- 
-        <!--
-            Object-to-Relation-Mapping (ORM) integration with Hibernate, JPA, and iBatis.
-            (depends on spring-core, spring-beans, spring-context, spring-tx)
-            Define this if you need ORM (org.springframework.orm.*)
-        -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-orm</artifactId>
-            <version>${org.springframework.version}</version>
-        </dependency>
- 
         <!--
             Web application development utilities applicable to both Servlet and Portlet Environments
             (depends on spring-core, spring-beans, spring-context)
@@ -64,37 +52,6 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>${org.springframework.version}</version>
-        </dependency>
- 
- 
- 
-        <!--
-            Support for testing Spring applications with tools such as JUnit and TestNG
-            This artifact is generally always defined with a 'test' scope for the integration testing framework and unit testing stubs
-        -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>${org.springframework.version}</version>
-            <scope>test</scope>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>facelets-taglib-jsf20-spring-3</artifactId>
-            <version>0.5</version>
-        </dependency>  
-        
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-web</artifactId>
-            <version>${org.springframework.version}</version>
-        </dependency>         
-        
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-config</artifactId>
             <version>${org.springframework.version}</version>
         </dependency>        
         
