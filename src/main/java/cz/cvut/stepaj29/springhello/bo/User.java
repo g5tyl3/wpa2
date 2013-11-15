@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package cz.cvut.stepaj29.springHello.bo;
+package cz.cvut.stepaj29.springhello.bo;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
