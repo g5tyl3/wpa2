@@ -34,10 +34,11 @@ public class HelloBeanBB {
     public String getUserName() {
         return userName;
     }
-    public void execute()
+    public String execute()
     {
         String greetingMessage = helloBean.sayHello(userName);
         FacesMessage message = new FacesMessage("ok", greetingMessage);
         FacesContext.getCurrentInstance().addMessage(null, message);
+        return "page1";
     }
 }
